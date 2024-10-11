@@ -8,7 +8,7 @@ import Logo from './Logo'
 const Header = () => {
     const menus = ["Features", "Resources", "Pricing"]
     return (
-        <header className='z-50 flex justify-between items-center w-full py-4 px-16 backdrop-blur-md fixed top-0 left-0 right-0 bg-background/80'>
+        <header className='z-20 flex justify-between items-center w-full py-4 px-16 backdrop-blur-md fixed top-0 left-0 right-0 bg-background/80'>
             {/* Logo on the left */}
             <Logo position={"top"} />
 
@@ -20,8 +20,7 @@ const Header = () => {
                     </Link>
                 ))}
                 <Separator orientation="vertical" className="h-auto" />
-                <Button variant="ghost">Log in</Button>
-                <Button variant="outline">Sign up</Button>
+                <Button>Try It Free</Button>
                 <ModeToggle />
             </div>
         </header>
