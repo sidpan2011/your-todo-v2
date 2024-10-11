@@ -6,7 +6,7 @@ import Hero from './Hero'
 
 const HomePage = () => {
   return (
-    <div className=''>
+    <div className='dark:bg-black'>
         <ParticlesDemo />
         <Hero />
     </div>
