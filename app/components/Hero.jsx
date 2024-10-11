@@ -1,10 +1,10 @@
-import SparklesText from '@/components/ui/sparkles-text'
 import React from 'react'
+import Title from './Title'
 
 const Hero = () => {
   return (
     <div className='min-h-screen'>
-      <SparklesText text={"Hero"} />
+      <Title title={"Hero"}/>
     </div>
   )
 }
