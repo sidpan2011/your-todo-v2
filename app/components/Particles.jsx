@@ -3,10 +3,11 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Particles from "@/components/ui/particles";
-import { Button } from "@/components/ui/button";
 import { AnimatedShinyTextDemo } from "./AnimatedShinyText";
-import { ChevronRight } from "lucide-react";
 import Title from "./Title";
+import RainbowButtonReuseable from "./RainbowButtonReuseable";
+import Subtitle from "./Subtitle";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 
 
@@ -19,8 +20,8 @@ export function ParticlesDemo() {
     }, [theme]);
 
     return (
-        <div className="flex flex-col min-h-screen bg-background overflow-hidden">
-            <main className="flex-grow relative flex items-center">
+        <div className="flex flex-col justify-center min-h-auto bg-background overflow-hidden">
+            <main className="flex-grow relative flex mt-40 justify-center">
                 <Particles
                     className="absolute inset-0 z-0"
                     quantity={50}
@@ -31,10 +32,11 @@ export function ParticlesDemo() {
                 <div className="z-20 relative mx-16 flex flex-col items-center gap-1">
                     <AnimatedShinyTextDemo />
                     <Title title={"Conquer Your Tasks, Master Your Day."} />
-                    <p className="text-lg tracking-tight text-gray-400 mb-6 text-balance md:text-xl text-center">
-                    Stay effortlessly organized, streamline every task, and unlock your full potential to achieve more with clarity and ease.
-                    </p>
-                    <Button>Get Started for free<ChevronRight className="ml-1" size={18} /></Button>
+                    <Subtitle text={"Stay effortlessly organized, streamline every task, and unlock your full potential to achieve more with clarity and ease."} />
+                    <RainbowButtonReuseable text={"Get started for free"} />
+                    <div className="relative lg:h-[70vh] lg:w-[80vw] h-[30vh] w-[90vw] md:h-[60vh] md:w-[] mx-4 my-12 rounded-xl">
+                        <BorderBeam duration={8} />
+                    </div>
                 </div>
             </main >
         </div >

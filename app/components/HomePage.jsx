@@ -1,12 +1,11 @@
-import React from 'react'
-import Header from './Header'
-import Particles from '@/components/ui/particles'
+import React from 'react' 
 import { ParticlesDemo } from './Particles'
 import Hero from './Hero'
+import Footer from './Footer'
 
 const HomePage = () => {
   return (
-    <div className='dark:bg-black'>
+    <div className='bg-white dark:bg-black'>
         <ParticlesDemo />
         <Hero />
     </div>

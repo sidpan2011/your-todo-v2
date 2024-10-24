@@ -4,7 +4,7 @@ import React from 'react'
 
 const pricing = () => {
   return (
-    <div>pricing</div>
+    <div className='mt-32'>pricing</div>
   )
 }
 
