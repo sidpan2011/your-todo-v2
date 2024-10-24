@@ -3,12 +3,11 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Particles from "@/components/ui/particles";
-import Header from "./Header";
-import { Separator } from "@/components/ui/separator";
-import { SparklingText } from "./SparklingText";
-import { Button } from "@/components/ui/button";
 import { AnimatedShinyTextDemo } from "./AnimatedShinyText";
-import { ChevronRight } from "lucide-react";
+import Title from "./Title";
+import RainbowButtonReuseable from "./RainbowButtonReuseable";
+import Subtitle from "./Subtitle";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 
 
@@ -21,13 +20,8 @@ export function ParticlesDemo() {
     }, [theme]);
 
     return (
-        <div className="flex flex-col min-h-screen bg-background overflow-hidden">
-            <div className="z-30 relative">
-                <Header />
-                <Separator className="fixed w-full top-[72px]" />
-            </div>
-
-            <main className="flex-grow relative flex items-center">
+        <div className="flex flex-col justify-center min-h-auto bg-background overflow-hidden">
+            <main className="flex-grow relative flex mt-40 justify-center">
                 <Particles
                     className="absolute inset-0 z-0"
                     quantity={50}
@@ -37,13 +31,12 @@ export function ParticlesDemo() {
                 />
                 <div className="z-20 relative mx-16 flex flex-col items-center gap-1">
                     <AnimatedShinyTextDemo />
-                    <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-br bg-clip-text text-center lg:text-8xl md:text-7xl px-8  leading-none text-transparent from-black to-gray-500/80 dark:from-white dark:to-gray-300/80 py-6 font-medium tracking-tighter text-balance text-6xl translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">
-                        Conquer Your Tasks, Master Your Day.
-                    </h1>
-                    <p className="text-lg tracking-tight text-gray-400 mb-6 text-balance md:text-xl text-center">
-                    Stay effortlessly organized, streamline every task, and unlock your full potential to achieve more with clarity and ease.
-                    </p>
-                    <Button>Get Started for free<ChevronRight className="ml-1" size={18} /></Button>
+                    <Title title={"Conquer Your Tasks, Master Your Day."} />
+                    <Subtitle text={"Stay effortlessly organized, streamline every task, and unlock your full potential to achieve more with clarity and ease."} />
+                    <RainbowButtonReuseable text={"Get started for free"} />
+                    <div className="relative lg:h-[70vh] lg:w-[80vw] h-[30vh] w-[90vw] md:h-[60vh] md:w-[] mx-4 my-12 rounded-xl">
+                        <BorderBeam duration={8} />
+                    </div>
                 </div>
             </main >
         </div >
